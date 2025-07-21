@@ -1,3 +1,4 @@
+// src/components/UserList.jsx
 import React, { useContext } from 'react';
 import { DataContext } from '../context/DataContext';
 import CommonTable from './CommonTable';
@@ -5,12 +6,15 @@ import CommonTable from './CommonTable';
 const UserList = () => {
   const { users } = useContext(DataContext);
 
-  const headers = ['id', 'name', 'username', 'email', 'address'];
+const headers = ['srNo', 'name', 'email', 'phone'];
 
-  const formattedUsers = users.map(user => ({
-    ...user,
-    address: `${user.address.street}, ${user.address.city}`,
-  }));
+ const formattedUsers = users.map((user, index) => ({
+  srNo: index + 1,
+  name: user.name,
+  email: user.email,
+  phone: user.phone,
+}));
+
 
   return (
     <div>

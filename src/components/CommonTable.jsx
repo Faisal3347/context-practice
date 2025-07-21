@@ -1,4 +1,3 @@
-// src/components/CommonTable.jsx
 import React from 'react';
 
 const CommonTable = ({ headers, data }) => {

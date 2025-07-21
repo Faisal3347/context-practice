@@ -1,4 +1,3 @@
-// src/components/UserList.jsx
 import React, { useContext } from 'react';
 import { DataContext } from '../context/DataContext';
 import CommonTable from './CommonTable';
@@ -8,7 +7,6 @@ const UserList = () => {
 
   const headers = ['id', 'name', 'username', 'email', 'address'];
 
-  // Flatten address for display
   const formattedUsers = users.map(user => ({
     ...user,
     address: `${user.address.street}, ${user.address.city}`,
